@@ -24,9 +24,11 @@ export function Hero() {
           &gt;_ SUB-MICROSECOND DIGITAL DEFENSE SYSTEM
         </p>
 
-        <h1 className="font-display text-6xl font-bold uppercase italic leading-[0.92] tracking-tight sm:text-7xl lg:text-8xl">
-          <span className="block text-white">AXIOM</span>
-          <span className="block text-[#00f0ff] text-glow-cyan">ZERO</span>
+        <h1 className="font-display text-6xl font-black uppercase italic leading-[0.82] tracking-[-0.08em] text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.28)] sm:text-7xl lg:text-8xl">
+          <span className="block">AXIOM</span>
+          <span className="block text-[#00f0ff] text-glow-cyan drop-shadow-[0_0_10px_rgba(0,240,255,0.35)]">
+            ZERO
+          </span>
         </h1>
 
         <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/55">
