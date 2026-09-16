@@ -24,9 +24,13 @@ export function Hero() {
           &gt;_ SUB-MICROSECOND DIGITAL DEFENSE SYSTEM
         </p>
 
-        <h1 className="font-display text-6xl font-black uppercase italic leading-[0.82] tracking-[-0.08em] text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.28)] sm:text-7xl lg:text-8xl">
+        <h1 className="font-display text-[3.5rem] font-black uppercase italic leading-[0.82] tracking-[-0.08em] text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.28)] sm:text-7xl lg:text-8xl">
           <span className="block">AXIOM</span>
-          <span className="block text-[#00f0ff] text-glow-cyan drop-shadow-[0_0_10px_rgba(0,240,255,0.35)]">
+          <span
+            aria-label="ZERO"
+            className="glitch-word block text-[#00f0ff] text-glow-cyan drop-shadow-[0_0_10px_rgba(0,240,255,0.35)]"
+            data-text="ZERO"
+          >
             ZERO
           </span>
         </h1>
@@ -39,7 +43,8 @@ export function Hero() {
           <span className="text-white/35">No slide decks. No fluff._</span>
         </p>
 
-        <p className="mt-8 text-[0.68rem] font-bold tracking-[0.16em] text-[#00f0ff]">
+        <p className="mt-8 inline-flex items-center gap-2 text-[0.68rem] font-bold tracking-[0.16em] text-[#00f0ff]">
+          <span className="h-1.5 w-1.5 animate-axiom-pulse rounded-full bg-[#00f0ff] shadow-[0_0_10px_rgba(0,240,255,0.9)]" />
           TELEMETRY_CLOCK // HARDWARE ENCLAVE TIME
         </p>
         <div className="mt-3 flex flex-wrap gap-2.5">

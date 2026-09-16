@@ -17,7 +17,7 @@ export function NeonButton({
   return (
     <button
       className={cn(
-        'group relative inline-flex items-center justify-center gap-2 rounded font-mono text-[0.78rem] font-black uppercase tracking-[0.12em] transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-40',
+        'group relative inline-flex items-center justify-center gap-2 rounded font-mono text-[0.78rem] font-black uppercase tracking-[0.12em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f0ff] focus-visible:ring-offset-2 focus-visible:ring-offset-[#000000] disabled:cursor-not-allowed disabled:opacity-40',
         'px-6 py-2.5',
         variant === 'solid' &&
           'bg-[#00f0ff] text-black shadow-[0_0_25px_rgba(0,240,255,0.45)] hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_0_35px_rgba(255,255,255,0.7)]',

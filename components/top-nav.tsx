@@ -18,7 +18,7 @@ export function TopNav() {
           <a
             key={l}
             href={`#${l.split(' ')[0].toLowerCase()}`}
-            className="transition-colors hover:text-white"
+            className="rounded-sm transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00f0ff] focus-visible:ring-offset-4 focus-visible:ring-offset-[#000000]"
           >
             {l}
           </a>

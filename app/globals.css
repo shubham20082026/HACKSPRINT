@@ -190,6 +190,43 @@
   .text-glow-cyan {
     text-shadow: 0 0 22px rgba(0, 240, 255, 0.7), 0 0 48px rgba(0, 240, 255, 0.32);
   }
+  .glitch-word {
+    background: radial-gradient(ellipse at center, rgba(0, 240, 255, 0.2) 0%, rgba(0, 240, 255, 0.06) 36%, transparent 72%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 115% 135%;
+    isolation: isolate;
+    position: relative;
+    width: fit-content;
+    animation: axiom-glitch-flicker 4.2s steps(1, end) infinite;
+    transition: text-shadow 180ms ease, filter 180ms ease;
+  }
+  .glitch-word::before,
+  .glitch-word::after {
+    content: attr(data-text);
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+  }
+  .glitch-word::before {
+    color: #ff2d6f;
+    text-shadow: 0 0 18px rgba(255, 45, 111, 0.75);
+    animation: axiom-glitch-pink 3.8s steps(1, end) infinite;
+  }
+  .glitch-word::after {
+    color: #00f0ff;
+    text-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+    animation: axiom-glitch-cyan 3.8s steps(1, end) infinite;
+  }
+  .glitch-word:hover {
+    filter: brightness(1.14);
+    text-shadow: 0 0 26px rgba(0, 240, 255, 0.95), 0 0 62px rgba(0, 240, 255, 0.45);
+  }
+  .glitch-word:hover::before,
+  .glitch-word:hover::after {
+    animation-duration: 1.7s;
+  }
   .glass {
     background: linear-gradient(150deg, rgba(6, 14, 24, 0.82) 0%, rgba(2, 5, 12, 0.94) 100%);
     backdrop-filter: blur(18px);
@@ -229,6 +266,44 @@
 }
 .animate-axiom-flicker {
   animation: axiom-flicker 4s linear infinite;
+}
+
+@keyframes axiom-glitch-flicker {
+  0%, 89%, 100% { opacity: 1; }
+  90% { opacity: 0.82; }
+  91% { opacity: 1; }
+  93% { opacity: 0.55; }
+  94% { opacity: 1; }
+}
+@keyframes axiom-glitch-cyan {
+  0%, 88%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
+  90% { clip-path: inset(12% 0 64% 0); transform: translate(0.08em, -0.02em); opacity: 0.95; }
+  91% { clip-path: inset(58% 0 16% 0); transform: translate(-0.12em, 0.03em); opacity: 0.8; }
+  93% { clip-path: inset(30% 0 42% 0); transform: translate(0.18em, 0); opacity: 0.9; }
+  94% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
+}
+@keyframes axiom-glitch-pink {
+  0%, 88%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
+  90% { clip-path: inset(62% 0 10% 0); transform: translate(-0.1em, 0.02em); opacity: 0.8; }
+  91% { clip-path: inset(18% 0 58% 0); transform: translate(0.13em, -0.03em); opacity: 0.9; }
+  93% { clip-path: inset(72% 0 4% 0); transform: translate(-0.2em, 0); opacity: 0.75; }
+  94% { clip-path: inset(0 0 0 0); transform: translate(0); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .glitch-word,
+  .glitch-word::before,
+  .glitch-word::after,
+  .animate-axiom-pulse,
+  .animate-axiom-sweep,
+  .animate-axiom-flicker,
+  .animate-axiom-rise,
+  .animate-axiom-scan-down {
+    animation: none;
+  }
 }
 
 @keyframes axiom-rise {
